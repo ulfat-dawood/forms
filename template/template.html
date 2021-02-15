@@ -4,7 +4,10 @@
 
 TYPE:   textarea      text     checkbox     radio      select     selectmultiple
 
-<div id="cfgenwp-elementbuilder-#E" class="cfgenwp-fb-element-c" data-cfgenwp_element_type="TYPE-HERE" data-cfgenwp_element_id="#E">	
+#E = starts from 1
+#SE = starts from 0
+
+<div id="cfgenwp-elementbuilder-#E" class="cfgenwp-fb-element-c" data-cfgenwp_element_type="#TYPE" data-cfgenwp_element_id="#E">	
 
     <label class="cfgen-label control-label font-w-n" id="cfgen-element-#E-label" > 
         <span class="cfgen-label-value">TITLE</span>
@@ -55,11 +58,31 @@ TYPE:   textarea      text     checkbox     radio      select     selectmultiple
 
 
 
+<!-- END EVERY FORM WITH:  -->
+
+<div class="modal-footer text-left">
+	<div class="row">
+	  <div class="col-md-9 pull-right">
+	     <div id="hint_msg1" class="text-left"></div>
+	  </div>
+	  <div class="col-md-3 text-right pull-left">
+		  <!--button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button-->
+		  <div class="cfgen-input-c" id="cfgen-element-#E-input-c" >
+			 <button type="button"  name="submit_btn" id="submit_btn" class=" cfgen-submit btn btn-primary"  >Save</button>
+		  </div>
+	  </div>
+	</div>
+</div>
 
 
 
 
-<!--  BOORSTRAP CLASSES:
+
+
+
+<!--  
+
+========= BOORSTRAP CLASSES =========
 
 divider-dashed
 -------------------
@@ -74,11 +97,7 @@ text-center
 text-justify
 
 
-
--->
-
-
-<!-- CSS STYLES:
+========= CSS STYLES =========
 
 font-family: "Droid Arabic Kufi", Times, serif;
 
