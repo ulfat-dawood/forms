@@ -1,12 +1,5 @@
 <!-- Every form element must start with:  --> 
 
-
-
-TYPE:   textarea      text     checkbox     radio      select     selectmultiple
-
-#E = starts from 1
-#SE = starts from 0
-
 <div id="cfgenwp-elementbuilder-#E" class="cfgenwp-fb-element-c" data-cfgenwp_element_type="#TYPE" data-cfgenwp_element_id="#E">	
 
     <label class="cfgen-label control-label font-w-n" id="cfgen-element-#E-label" > 
@@ -14,7 +7,7 @@ TYPE:   textarea      text     checkbox     radio      select     selectmultiple
     </label>
     
 
-    HERE ADD YOUR CODE!
+    <!-- HERE ADD YOUR CODE! -->
     
 </div>
 
@@ -56,9 +49,22 @@ TYPE:   textarea      text     checkbox     radio      select     selectmultiple
 
 </div>
 
+<!-- SELECT  -->
+
+<div class="cfgen-input-c" id="cfgen-element-#E-input-c" >
+    <select class="select2" name="cfgen-element-#E" id="cfgen-element-#E">     
+        <option value="Option1">Option1</option>
+        <option value="Option2">Option2</option>
+        <option value="Option3">Option3</option>             
+    </select>
+    <script>
+      $("#cfgen-element-#E").css("width","100%").select2({allowClear:true});
+   </script>
+</div>
 
 
-<!-- END EVERY FORM WITH:  -->
+
+<!-- END EVERY FORM WITH: (change #E)  -->
 
 <div class="modal-footer text-left">
 	<div class="row">
@@ -76,21 +82,30 @@ TYPE:   textarea      text     checkbox     radio      select     selectmultiple
 
 
 
+<!-- 
+    
+    
 
 
+========= VARIABLES =========
 
+#TYPE:   textarea      text     checkbox     radio      select     selectmultiple
 
-<!--  
+element
+#E = starts from 1
+
+sub-element
+#SE = starts from 0
 
 ========= BOORSTRAP CLASSES =========
 
 divider-dashed
 -------------------
-FLOAT: 
+-FLOAT-
 pull-right
 pull-left
 -------------------
-ALIGNMENT:
+-ALIGNMENT-
 text-left
 text-right
 text-center
@@ -101,4 +116,6 @@ text-justify
 
 font-family: "Droid Arabic Kufi", Times, serif;
 
-  -->
+style="text-align: left !important;"
+
+-->
